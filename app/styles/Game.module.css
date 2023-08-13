@@ -1,0 +1,75 @@
+.main {
+    height: 85vh;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+
+.main.hard {
+    grid-template-columns: repeat(6, auto);
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    background: #323232;
+    position: relative;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: #323232;
+    width: 100%;
+    transition: .3s ease-in-out;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 50%);
+    z-index: 2;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background: #323232;
+    width: 100%;
+    transition: .3s ease-in-out;
+    clip-path: polygon(0 0, 50% 50%, 100% 100%, 0 100%);
+    z-index: 2;
+}
+
+.card.active {
+    background: #ddd;
+}
+
+.card.active::after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 0);
+}
+
+.card.active::before {
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 100%);
+}
+
+.card img {
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    transition: .3s ease-in-out;
+    opacity: 0;
+}
+
+.card.active img {
+    opacity: 1;
+}
+
+.match {
+    position: absolute;
+    top: 10px;
+}

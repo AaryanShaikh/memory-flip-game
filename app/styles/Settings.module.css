@@ -1,0 +1,71 @@
+.settings {
+    height: 50vh;
+    border: solid;
+    width: 50vw;
+    background: var(--white-color);
+    color: var(--background-color);
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.options {
+    height: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.options button {
+    height: 7vh;
+    width: 50%;
+    border: none;
+    background: var(--white-color);
+    border-bottom: 1px solid var(--white-color);
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.options button:hover {
+    border-bottom: 1px solid var(--background-color);
+}
+
+.title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    position: relative;
+    top: -30px;
+    background: var(--background-color);
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: 0% 0% 25% 25% / 0% 0% 100% 100%;
+    font-size: 3vh;
+}
+
+.title button {
+    position: absolute;
+    right: -30px;
+    top: -10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--background-color);
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .title h1 {
+        font-size: 1.5vh;
+    }
+}
